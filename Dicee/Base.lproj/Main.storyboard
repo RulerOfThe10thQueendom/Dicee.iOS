@@ -17,52 +17,65 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" userLabel="Outline">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="K0W-NI-xky" userLabel="Background Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="K0W-NI-xky" userLabel="Background Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0o-cJ-8Ia">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="282"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0o-cJ-8Ia" userLabel="Las Vegas View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="324"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Shd-6r-u8r">
-                                        <rect key="frame" x="80" y="71" width="215" height="140"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Shd-6r-u8r" userLabel="Las Vegas Image">
+                                        <rect key="frame" x="80" y="92" width="215" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="215" id="4eA-9U-zV2"/>
+                                            <constraint firstAttribute="height" constant="140" id="CCr-hs-juf"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Shd-6r-u8r" firstAttribute="centerX" secondItem="Z0o-cJ-8Ia" secondAttribute="centerX" id="SfQ-bo-dVo"/>
+                                    <constraint firstItem="Shd-6r-u8r" firstAttribute="centerY" secondItem="Z0o-cJ-8Ia" secondAttribute="centerY" id="bOt-KO-fyf"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-24-ESB">
-                                <rect key="frame" x="67" y="283" width="240" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-24-ESB" userLabel="Dice View">
+                                <rect key="frame" x="16" y="324" width="343" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice5" translatesAutoresizingMaskIntoConstraints="NO" id="nZi-qb-Lwo" userLabel="Dice 2 Image View">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice5" translatesAutoresizingMaskIntoConstraints="NO" id="nZi-qb-Lwo" userLabel="Dice 1">
+                                        <rect key="frame" x="40" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="d3V-Jn-557"/>
                                             <constraint firstAttribute="height" constant="100" id="zAS-zU-6pv"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice3" translatesAutoresizingMaskIntoConstraints="NO" id="xLz-vN-9wV" userLabel="Dice 1 Image View">
-                                        <rect key="frame" x="140" y="0.0" width="100" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice3" translatesAutoresizingMaskIntoConstraints="NO" id="xLz-vN-9wV" userLabel="Dice 2">
+                                        <rect key="frame" x="203" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Lfb-cA-VwL"/>
                                             <constraint firstAttribute="width" constant="100" id="p7W-b6-ZmH"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xLz-vN-9wV" secondAttribute="trailing" constant="40" id="62i-J9-Q7T"/>
+                                    <constraint firstItem="nZi-qb-Lwo" firstAttribute="leading" secondItem="ILB-24-ESB" secondAttribute="leading" constant="40" id="KGG-Je-msC"/>
+                                    <constraint firstAttribute="height" constant="100" id="MuV-Q8-eNA"/>
+                                    <constraint firstItem="xLz-vN-9wV" firstAttribute="centerY" secondItem="ILB-24-ESB" secondAttribute="centerY" id="Uxl-nJ-OHG"/>
+                                    <constraint firstItem="nZi-qb-Lwo" firstAttribute="centerY" secondItem="ILB-24-ESB" secondAttribute="centerY" id="Vk1-T2-WgP"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-8R-v4f">
-                                <rect key="frame" x="0.0" y="384" width="387" height="283"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-8R-v4f" userLabel="Button View">
+                                <rect key="frame" x="16" y="424" width="343" height="243"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA5-KN-yIW">
-                                        <rect key="frame" x="128" y="115" width="131" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA5-KN-yIW" userLabel="Button">
+                                        <rect key="frame" x="106" y="95.5" width="131" height="52"/>
                                         <color key="backgroundColor" red="0.78738981490000004" green="0.2464441359" blue="0.27221894260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="Ba6-Ih-VLr"/>
+                                            <constraint firstAttribute="width" constant="131" id="qDJ-c7-u3A"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <state key="normal" title="Roll">
                                             <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,12 +92,28 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aA5-KN-yIW" firstAttribute="centerX" secondItem="GsZ-8R-v4f" secondAttribute="centerX" id="m5c-S1-LpB"/>
+                                    <constraint firstItem="aA5-KN-yIW" firstAttribute="centerY" secondItem="GsZ-8R-v4f" secondAttribute="centerY" id="xPW-7i-eF0"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ILB-24-ESB" firstAttribute="centerY" secondItem="K0W-NI-xky" secondAttribute="centerY" id="1SS-TV-FFH"/>
-                            <constraint firstItem="ILB-24-ESB" firstAttribute="centerX" secondItem="K0W-NI-xky" secondAttribute="centerX" id="dSD-7T-ngg"/>
+                            <constraint firstAttribute="trailing" secondItem="Z0o-cJ-8Ia" secondAttribute="trailing" id="2MF-cG-Sy7"/>
+                            <constraint firstItem="GsZ-8R-v4f" firstAttribute="top" secondItem="ILB-24-ESB" secondAttribute="bottom" id="6xS-KM-XEq"/>
+                            <constraint firstItem="GsZ-8R-v4f" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="CZz-6O-Xam"/>
+                            <constraint firstAttribute="trailing" secondItem="K0W-NI-xky" secondAttribute="trailing" id="FUq-XL-8Kj"/>
+                            <constraint firstItem="K0W-NI-xky" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="OZ0-Xb-Hme"/>
+                            <constraint firstItem="GsZ-8R-v4f" firstAttribute="height" secondItem="Z0o-cJ-8Ia" secondAttribute="height" multiplier="3:4" id="Xyc-QN-fZl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ILB-24-ESB" secondAttribute="trailing" id="Zsu-Tg-N2U"/>
+                            <constraint firstItem="GsZ-8R-v4f" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="bOe-pK-8xF"/>
+                            <constraint firstAttribute="bottom" secondItem="GsZ-8R-v4f" secondAttribute="bottom" id="bnr-0z-eCb"/>
+                            <constraint firstItem="Z0o-cJ-8Ia" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cex-CE-G6p"/>
+                            <constraint firstItem="ILB-24-ESB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="j3S-2U-Atd"/>
+                            <constraint firstAttribute="bottom" secondItem="K0W-NI-xky" secondAttribute="bottom" id="mkx-c6-jQ3"/>
+                            <constraint firstItem="K0W-NI-xky" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="qct-2t-EnV"/>
+                            <constraint firstItem="Z0o-cJ-8Ia" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zHF-TK-3E1"/>
+                            <constraint firstItem="ILB-24-ESB" firstAttribute="top" secondItem="Z0o-cJ-8Ia" secondAttribute="bottom" id="zsR-lb-fTt"/>
                         </constraints>
                     </view>
                     <connections>
